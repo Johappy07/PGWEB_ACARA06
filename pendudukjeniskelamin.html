@@ -53,7 +53,7 @@
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                <h4>Jumlah Penduduk</h4>
+                <h4>Jumlah Penduduk Menurut Jenis Kelamin</h4>
             </div>
             <div class="card-body">
                 <div id="chart"></div>
@@ -92,9 +92,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>var options = {
             series: [{
-                name: 'Jumlah Penduduk',
-                data: [251195,123924,131122,247362,107216,213515,257025,220699,210805,281681,162119, 337013]
-            }],
+              name: 'Perempuan',
+              data: [124964,61576,65062,123009,52284,105288,128205,109648,105598,140290,79693,166367]
+            },
+            {
+              name: 'Laki-Laki',
+              data: [126231,62348,66060,124353,54932,108227, 128820,111051,105207,141391,82426,170646]
+            }
+            ],
             chart: {
                 type: 'bar',
                 height: 350
@@ -145,12 +150,11 @@
                 },
                 offsetY: -20,
                 style: {
-                    fontSize: '10px',
+                    fontSize: '8px',
                     colors: ["#304758"]
                 }
             },
         };
-
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();</script>
 </body>

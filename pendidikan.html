@@ -53,7 +53,7 @@
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                <h4>Jumlah Penduduk</h4>
+                <h4>Jumlah Fasilitas Pendidikan</h4>
             </div>
             <div class="card-body">
                 <div id="chart"></div>
@@ -90,10 +90,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.42.0/apexcharts.min.js"
         integrity="sha512-HctQcT5hnI/elQck4950pvd50RuDnjCSGSoHI8CNyQIYVxsUoyJ+gSQIOrll4oM/Z7Kfi7WCLMIbJbiwYHFCpA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>var options = {
+    <script>
+        var options = {
             series: [{
                 name: 'Jumlah Penduduk',
-                data: [251195,123924,131122,247362,107216,213515,257025,220699,210805,281681,162119, 337013]
+                data: [302, 248, 248, 225, 220, 217, 215, 195, 189, 138, 137, 102]
             }],
             chart: {
                 type: 'bar',
@@ -101,7 +102,7 @@
             },
             plotOptions: {
                 bar: {
-                    horizontal: false,
+                    horizontal: true,
                     columnWidth: '55%',
                     endingShape: 'rounded',
                     dataLabels: {
@@ -120,12 +121,12 @@
             xaxis: {
                 categories: ['Pondokgede', 'Jatisampurna', 'Pondokmelati', 'Jatiasih', 'Bantargebang', 'Mustikajaya', ' Bekasi Timur', 'Rawalumbu', 'Bekasi Selatan', 'Bekasi Barat', 'Medansatria', 'Bekasi utara'],
                 title: {
-                    text: 'Kecamatan'
+                    text: ''
                 }
             },
             yaxis: {
                 title: {
-                    text: 'Jiwa'
+                    text: 'Kecamatan'
                 }
             },
             fill: {
@@ -143,7 +144,7 @@
                 formatter: function (val) {
                     return val;
                 },
-                offsetY: -20,
+                offsetY: 0,
                 style: {
                     fontSize: '10px',
                     colors: ["#304758"]
